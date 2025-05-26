@@ -120,9 +120,55 @@ header {
     }
 }
 
-.page-title {
+.only-tittle h1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+
+.section.only-tittle img {
+    width: 300px; 
+    max-width: 100%;
+    height: auto;
+}
+
+section.sobre-section {
+    margin: 0px auto 0 auto;
+    padding: 10px 10px;
+    max-width: 1000px;
+    background-color: #000000; 
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.1);
+}
+
+.sobre-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha todo conteúdo à esquerda */
+    padding: 2rem 4rem;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.page-title-sobre {
   text-align: left;
-  margin-top: 30px;
+  margin-top: 20px;
+  margin-bottom: 24px;
   font-size: 2rem;
-  color: #333;
+  color: #c00000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.page-title-sobre::before {
+  content: "•"; /* Seta para a direita */
+  font-size: 1.5rem;
+  color: #c00000;
+}
+
+.valores-list {
+    margin-top: 20px;
+    text-align: left;
+    align-self: flex; 
 }

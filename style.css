@@ -172,3 +172,8 @@ section.sobre-section {
     text-align: left;
     align-self: flex; 
 }
+
+.img {
+    float: right;
+    margin: 100px;
+}

@@ -81,7 +81,7 @@ header {
     display: none;
 }
 
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 948px) {
     .nav-bar {
         padding: 1.5rem 4rem;
     }
@@ -177,7 +177,100 @@ section.sobre-section {
     align-self: flex; 
 }
 
-.img {
+.section-home {
     float: right;
-    margin: 100px;
+    margin: 100px;  
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-container .page-title,
+.image-container .description, 
+.image-container .btn-default {
+    position: absolute;
+    left: 50%;
+    top: 30%; /* ajuste conforme necessário */
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    width: 90%;
+    text-shadow: 2px 2px 8px #000;
+}
+
+.image-container .description {
+    top: 50%; /* coloca a descrição um pouco abaixo do título */
+    font-size: 1.2rem;
+}
+
+.image-container .btn-default {
+    position: absolute;
+    left: 50%;
+    top: 70%; /* ajuste conforme necessário */
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #910000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.image-container .btn-phone {
+    position: absolute;
+    left: 50%;
+    top: 80%; /* coloca o telefone mais abaixo */
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #b40000fa;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.image-container .btn-phone:hover {
+    background-color: #86000057;
+}
+
+@media screen and (max-width: 768px) {
+    .image-container .btn-default {
+    position: absolute;
+    left: 50%;
+    top: 70%; /* ajuste conforme necessário */
+    transform: translateX(-50%);
+    padding: 10px 2px;
+    border-radius: 5px;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .image-container .btn-default {
+    position: absolute;
+    left: 50%;
+    top: 65%; /* ajuste conforme necessário */
+    min-height: 20px; /* ajuste conforme necessário */
+    transform: translateX(-50%);
+    padding: 10px 0.5px;
+    border-radius: 5px;
+    }
+    .image-container .btn-phone {
+    position: absolute;
+    left: 50%;
+    top: 80%; /* coloca o telefone mais abaixo */
+    min-height: 10px; /* ajuste conforme necessário */
+    margin-top: 10px;
+    transform: translateX(-50%);
+    padding: 10px 1px;
+    border-radius: 5px;
+    }
 }

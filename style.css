@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;900&family=Alfa+Slab+One&display=swap');
 * {
     padding: 0;
     margin: 0;
@@ -166,7 +166,7 @@ section.sobre-section {
 }
 
 .page-title-sobre::before {
-  content: "•"; /* Seta para a direita */
+  content: "•"; 
   font-size: 1.5rem;
   color: #c00000;
 }
@@ -183,10 +183,18 @@ section.sobre-section {
 }
 
 .image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;     
+    height: 1000px;          
     position: relative;
-    width: 100%;
-    height: auto;
+    background-image: url('Design sem nome (2).png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
 
 .image-container img {
     display: block;
@@ -194,59 +202,112 @@ section.sobre-section {
     height: auto;
 }
 
-.image-container .page-title,
-.image-container .description, 
-.image-container .btn-default {
+.image-container .page-title {
+    position: absolute;
+    left: 50%;           
+    top: 28%;            
+    transform: translateX(-50%); 
+    font-size: 3rem;
+    color: #ffffffde;
+    text-align: center;
+    text-shadow: 2px 2px 8px #000;
+    font-weight: 900;
+    font-family: 'Alfa Slab One', sans-serif;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: #6400008e;
+    padding: 1rem;
+    border-radius: 30px;
+}
+
+.image-container .page-title span {
+    color: #c50000;
+}
+
+
+
+.image-container .description {
     position: absolute;
     left: 50%;
-    top: 30%; /* ajuste conforme necessário */
-    transform: translate(-50%, -50%);
-    color: #fff;
+    top: 50%; 
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: #ffffff;
     text-align: center;
-    width: 90%;
     text-shadow: 2px 2px 8px #000;
 }
 
+
 .image-container .description {
-    top: 50%; /* coloca a descrição um pouco abaixo do título */
-    font-size: 1.2rem;
+    top: 43%; 
+    font-size: 1.5rem;
 }
 
 .image-container .btn-default {
-    position: absolute;
-    left: 50%;
-    top: 70%; /* ajuste conforme necessário */
-    transform: translateX(-50%);
-    padding: 10px 20px;
-    background-color: #910000;
+    padding: 6px 16px;
+    background-color: #d10000;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
+    font-size: 1.10rem;
+    width: 250px;
+    text-align: center;
+    text-shadow: 2px 2px 8px #000;
+    margin-bottom: 20px; /* ajuste conforme necessário */
+    text-decoration: none;
+    height: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    background: transparent;
+    
+    
+}
+
+.image-container .btn-default:hover {
+    background-color: #910000cb;
 }
 
 .image-container .btn-phone {
-    position: absolute;
-    left: 50%;
-    top: 80%; /* coloca o telefone mais abaixo */
-    transform: translateX(-50%);
-    padding: 10px 20px;
-    background-color: #b40000fa;
+    padding: 6px 16px;
+    background-color: #d10000;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
+    width: 180px;
+    height: 30px;
+    font-size: 1.10rem;
+    margin-bottom: 20px;
+    text-decoration: none;
 }
 
 .image-container .btn-phone:hover {
-    background-color: #86000057;
+    background-color: #910000cb;
 }
+
+.image-container .btn-phone::before {
+    content: "\260E "; /* ☎ */
+    margin-right: 8px;
+    color:#ccc
+}
+
+
 
 @media screen and (max-width: 768px) {
     .image-container .btn-default {
     position: absolute;
     left: 50%;
-    top: 70%; /* ajuste conforme necessário */
+    top: 70%; 
     transform: translateX(-50%);
     padding: 10px 2px;
     border-radius: 5px;
@@ -257,8 +318,8 @@ section.sobre-section {
     .image-container .btn-default {
     position: absolute;
     left: 50%;
-    top: 65%; /* ajuste conforme necessário */
-    min-height: 20px; /* ajuste conforme necessário */
+    top: 65%; 
+    min-height: 20px; 
     transform: translateX(-50%);
     padding: 10px 0.5px;
     border-radius: 5px;
@@ -266,8 +327,8 @@ section.sobre-section {
     .image-container .btn-phone {
     position: absolute;
     left: 50%;
-    top: 80%; /* coloca o telefone mais abaixo */
-    min-height: 10px; /* ajuste conforme necessário */
+    top: 80%; 
+    min-height: 10px; 
     margin-top: 10px;
     transform: translateX(-50%);
     padding: 10px 1px;
@@ -299,3 +360,13 @@ body {
             background-color: #f7f7f7;
             font-weight: bold;
         }
+        .section-home {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('Design\ sem\ nome\ \(2\).png') no-repeat center center fixed;
+            background-size: cover;
+}
+        
